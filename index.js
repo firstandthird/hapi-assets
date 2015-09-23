@@ -37,5 +37,6 @@ exports.register = function(server, options, next) {
 };
 
 exports.register.attributes = {
-  name: 'assets'
+  name: 'pipeline',
+  pkg: require('./package.json')
 };
