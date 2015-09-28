@@ -32,6 +32,10 @@ exports.register = function(server, options, next) {
 
   require('./lib/handler')(server, plugin);
 
+  _.forIn(options.extensions, function(value, key) {
+    addExtension(key, value.pipeline, value.options);
+  });
+
   next();
 
 };
