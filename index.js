@@ -14,16 +14,16 @@ exports.register = function(server, options, next) {
     extensions: {}
   };
 
-  var addExtension = function(extension, fns, options) {
+  var addExtension = function(extension, pipeline, options) {
     if (plugin.extensions[extension]) {
       throw new Error(extension + ' extension already exists');
     }
-    if (typeof fns === 'function') {
-      fns = [fns];
+    if (typeof pipeline === 'function') {
+      pipeline = [pipeline];
     }
     plugin.extensions[extension] = {
-      options: options,
-      fns: fns
+      options: options || {},
+      pipeline: pipeline
     };
   };
 
