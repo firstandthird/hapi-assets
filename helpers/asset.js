@@ -1,6 +1,11 @@
 var path = require('path');
 var url = require('url');
-module.exports = function(assetPath) {
+module.exports = function(assetPath, version, options) {
+
+  if (typeof version == 'object') {
+    options = version;
+    version = null;
+  }
 
   var plugin = this;
 
@@ -8,8 +13,10 @@ module.exports = function(assetPath) {
 
   var urlPath = url.resolve(plugin.options.host, fullPath);
 
-  if (plugin.options.version) {
-    urlPath += '?v=' + plugin.options.version;
+  version = version || plugin.options.version;
+
+  if (version) {
+    urlPath += '?v=' + version;
   }
 
   return urlPath;
