@@ -4,6 +4,8 @@ var defaults = {
   endpoint: '/',
   path: '',
   cache: false,
+  host: '',
+  version: false,
   browserCache: {
     privacy: 'public',
     expiresIn: 0
