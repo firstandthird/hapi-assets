@@ -2,7 +2,12 @@ var _ = require('lodash');
 
 var defaults = {
   endpoint: '/',
-  path: ''
+  path: '',
+  cache: false,
+  browserCache: {
+    privacy: 'public',
+    expiresIn: 0
+  }
 };
 
 exports.register = function(server, options, next) {
