@@ -1,4 +1,10 @@
 
+0.0.8 / 2016-03-16
+==================
+
+  * updated pipeline to have specific commit
+  * rewrite to use pipeline lib
+
 0.0.7 / 2016-02-23
 ==================
 
