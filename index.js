@@ -1,6 +1,6 @@
-var _ = require('lodash');
+const _ = require('lodash');
 
-var defaults = {
+const defaults = {
   endpoint: '/',
   path: '',
   cache: false,
@@ -13,38 +13,20 @@ var defaults = {
 };
 
 exports.register = function(server, options, next) {
-
-  options = _.defaults(options, defaults);
-  var plugin = {
-    server: server,
-    options: options,
+  options = _.defaultsDeep(options, defaults);
+  const plugin = {
+    server,
+    options,
     extensions: {}
   };
 
-  var addExtension = function(extension, pipeline, options) {
-    if (plugin.extensions[extension]) {
-      throw new Error(extension + ' extension already exists');
-    }
-    if (typeof pipeline === 'function') {
-      pipeline = [pipeline];
-    }
-    plugin.extensions[extension] = {
-      options: options || {},
-      pipeline: pipeline
-    };
-  };
 
+  server.expose('pipeline', require('./lib/pipeline')(options));
   server.expose('getAsset', require('./helpers/asset').bind(plugin));
-  server.expose('addExtension', addExtension);
 
   require('./lib/handler')(server, plugin);
 
-  _.forIn(options.extensions, function(value, key) {
-    addExtension(key, value.pipeline, value.options);
-  });
-
   next();
-
 };
 
 exports.register.attributes = {

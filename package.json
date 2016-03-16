@@ -24,6 +24,13 @@
   "dependencies": {
     "async": "^1.4.2",
     "inert": "^3.0.1",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "pipeline": "https://github.com/firstandthird/pipeline.git"
+  },
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-config-firstandthird": "^1.6.0",
+    "eslint-plugin-react": "^4.2.3"
   }
 }
