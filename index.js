@@ -1,7 +1,7 @@
 const _ = require('lodash');
 
 const defaults = {
-  endpoint: '/',
+  assetPath: '/',
   path: '',
   cache: false,
   host: '',
@@ -21,7 +21,8 @@ exports.register = function(server, options, next) {
   };
 
 
-  server.expose('pipeline', require('./lib/pipeline')(options));
+  const pipeline = require('./lib/pipeline')(options);
+  server.expose('pipeline', pipeline);
   server.expose('getAsset', require('./helpers/asset').bind(plugin));
 
   require('./lib/handler')(server, plugin);
