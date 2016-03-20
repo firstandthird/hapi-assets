@@ -25,7 +25,7 @@
     "async": "^1.4.2",
     "inert": "^3.0.1",
     "lodash": "^3.10.1",
-    "pipeline": "https://github.com/firstandthird/pipeline.git#ba975cd"
+    "pipeline": "https://github.com/firstandthird/pipeline.git#5c4ce21"
   },
   "devDependencies": {
     "eslint": "^2.4.0",
