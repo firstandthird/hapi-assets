@@ -1,6 +1,6 @@
 {
   "name": "hapi-pipeline",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Hapi asset pipeline",
   "main": "index.js",
   "scripts": {
