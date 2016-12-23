@@ -22,15 +22,15 @@
   },
   "homepage": "https://github.com/firstandthird/hapi-pipeline#readme",
   "dependencies": {
-    "async": "^1.4.2",
-    "inert": "^3.0.1",
-    "lodash": "^3.10.1",
+    "async": "^2.1.4",
+    "inert": "^4.0.4",
+    "lodash": "^4.17.2",
     "ft-pipeline": "0.0.1"
   },
   "devDependencies": {
-    "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.1.0",
-    "eslint-config-firstandthird": "^1.6.0",
-    "eslint-plugin-react": "^4.2.3"
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-firstandthird": "^3.1.0",
+    "eslint-plugin-react": "^6.8.0"
   }
 }
