@@ -23,9 +23,9 @@
   "homepage": "https://github.com/firstandthird/hapi-pipeline#readme",
   "dependencies": {
     "async": "^1.4.2",
+    "ft-pipeline": "0.1.0",
     "inert": "^3.0.1",
-    "lodash": "^3.10.1",
-    "ft-pipeline": "0.0.1"
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "eslint": "^2.4.0",
